@@ -29,6 +29,10 @@ body{
     gap: 30px;
 }
 
+.cabecalho-menu-mobile{
+    display: none;
+}
+
 .cabecalho-menu-item{
     font-family: 'Sarala', sans-serif;
     color: #FFF2E7;
@@ -45,13 +49,13 @@ body{
     display: flex;
     flex-direction: row; /*no responsivo (min-width: 1100px) fica column, além de testar as medida de margin nas laterais*/
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .conteudo-principal-escrito{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .conteudo-principal-escrito-titulo{
@@ -124,4 +128,33 @@ body{
     height: 50px;
     display: block;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 1100px) {
+    .cabecalho{
+        justify-content: space-between;
+        margin:0 30px;
+    }
+
+    .cabecalho-menu-mobile{
+        display: flex;
+    }
+    
+    .cabecalho-menu-item{
+        display: none;
+    }
+
+    .conteudo-principal-escrito{
+        align-items: center;
+    }
+
+    .conteudo-principal{
+        flex-direction: column;
+        margin: 25px 40px;
+    }
+
+    .conteudo-secundario{
+        margin: 50px 40px 0px 40px;
+    }
+    
 }
